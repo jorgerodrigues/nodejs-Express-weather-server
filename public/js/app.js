@@ -2,7 +2,7 @@ console.log("Client side js file is loaded!");
 
 const getWeather = (location) => {
   messageOne.textContent = "Loading...";
-  fetch("http://localhost:3000/weather?address=" + location).then((response) => {
+  fetch("/weather?address=" + location).then((response) => {
     response.json().then((data) => {
       if (data.error) {
         renderWeatherData(data);
